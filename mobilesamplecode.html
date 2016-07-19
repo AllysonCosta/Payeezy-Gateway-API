@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+</head>
+
+<body>
+					
+					<form action="process.php" method="post">
+<!-- Form Styling -->					
+						<style>
+						input[type=text],select{width:100%;padding:12px 20px;margin:8px 0;display:inline-block;border:1px solid #ccc;border-radius:4px;box-sizing:border-box}input[type=submit]{width:100%;background-color:#4CAF50;color:#fff;padding:14px 20px;margin:8px 0;border:none;border-radius:4px;cursor:pointer}1001273878 input[type=submit]:hover{background-color:#45a049}div{border-radius:5px;padding:20px}
+						</style>
+						
+<!-- DollarAmount -->
+						<label for="tbPOS_DollarAmount"> Dollar Amount</label> 
+							<input name="tbPOS_DollarAmount" type="text" value="" maxlength="8" id="tbPOS_DollarAmount">
+<!-- Transaction Type -->					
+						<label for="ddlPOS_Transaction_Type">Transaction Type</label> 
+							<select name="ddlPOS_Transaction_Type" id="ddlPOS_Transaction_Type">
+								<option value="01">Pre-Auhorization</option>
+								<option value="02">Pre-Authorization Completion</option>
+								<option value="03">Forced Post</option>
+								<option selected="selected" value="00">Purchase</option>
+								<option value="13">Void</option>
+								<option value="04">Refund</option>
+								<option value="32">Tagged Pre-Authorization Completion</option>
+								<option value="30">Tagged Purchase</option>
+								<option value="34">Tagged Refund</option>
+							</select>
+<!-- Cardholder Name --> 													
+						<label for="tbPOS_CardHoldersName">Cardholder</label>
+							<input name="tbPOS_CardHoldersName" type="text" value="" maxlength="50" id="tbPOS_CardHoldersName">
+<!-- Card Number -->				
+						<label for="tbPOS_Card_Number">Card Number</label>
+							<input name="tbPOS_Card_Number" type="text" value="" maxlength="16" id="tbPOS_Card_Number">
+<!-- Expiration Date -->  							
+						<label for="ddlPOS_Expiry_Date_Month ddlPOS_Expiry_Date_Year">Expiration Date</label>
+	<!--Exp Date Month-->		<select name="ddlPOS_Expiry_Date_Month" id="ddlPOS_Expiry_Date_Month">
+								<option value="01">Jan</option>
+								<option value="02">Feb</option>
+								<option value="03">Mar</option>
+								<option value="04">Apr</option>
+								<option value="05">May</option>
+								<option value="06">Jun</option>
+								<option value="07">Jul</option>
+								<option value="08">Aug</option>
+								<option value="09">Sep</option>
+								<option value="10">Oct</option>
+								<option value="11">Nov</option>
+								<option value="Dec">Dec</option>
+							</select>
+	<!-- Exp Date Year-->		<select name="ddlPOS_Expiry_Date_Year" id="ddlPOS_Expiry_Date_Year">
+								<option value="12"selected>2016</option>
+								<option value="13" >2017</option>
+								<option value="14" >2018</option>
+								<option value="15" >2019</option>
+								<option value="16" >2020</option>
+								<option value="17" >2021</option>
+								<option value="18" >2022</option>
+								<option value="19" >2023</option>
+								<option value="20" >2024</option>
+								<option value="21" >2025</option>
+								<option value="22" >2026</option>
+							</select> 
+<!-- Street Address --> 	
+						<label for="tbPOS_VerificationStr1">Street Address</label>
+							<input name="tbPOS_VerificationStr1" type="text" maxlength="40" id="tbPOS_VerificationStr1">
+<!-- Zip Code --> 												
+						<label for="tbPOS_ZipCode">Zip Code</label>
+							<input name="tbPOS_ZipCode" type="text" id="tbPOS_ZipCode" maxlength="10">
+<!-- Customer Reference # -->							
+						<label for="tbPOS_Customer_Ref">Customer Reference Number </label> 
+							<input name="tbPOS_Customer_Ref" type="text" maxlength="50" id="tbPOS_Customer_Ref">
+<!-- Client Email --> 					
+						<label for="tb_Client_Email">E-mail</label> 
+							<input name="tb_Client_Email" type="text" id="tb_Client_Email">
+							
+							
+<!-- To add Additional Fields, remove comments to add to Form. --> 
+
+<!-- Gateway ID --> 
+				<!--	<label for="ddlPOS_ExactID">Gateway ID</label>							
+							<input name="ddlPOS_ExactID" id="ddlPOS_ExactID" value=""> -->
+							
+						
+<!-- Tax 1 Amount --> 							
+				<!--	<label for="tbPOS_Tax1Amount">Tax 1 Amount</label>							
+							<input name="tbPOS_Tax1Amount" id="tbPOS_Tax1Amount" value=""> -->
+							
+<!-- Tax 2 Amount -->  	
+				<!--	<label for="tbPOS_Tax2Amount">Tax 2 Amount</label>							
+							<input name="tbPOS_Tax2Amount" id="tbPOS_Tax2Amount" value=""> -->	
+							
+<!-- Transaction Tag-->  	
+				<!--	<label for="tbPOS_Transaction_Tag">Transaction Tag</label>							
+							<input name="tbPOS_Transaction_Tag" id="tbPOS_Transaction_Tag" value=""> -->								
+
+<!-- Authorization Number-->  	
+				<!--	<label for="tbPOS_Authorization_Num">Authorization Number</label>							
+							<input name="tbPOS_Authorization_Num" id="tbPOS_Authorization_Num" value=""> -->								
+							
+<!-- Reference Number Number-->  	
+				<!--	<label for="tbPOS_Reference_No">Reference Number</label>							
+							<input name="tbPOS_Reference_No" id="tbPOS_Reference_No" value=""> -->								
+<!-- Reference 3 -->
+				<!--	<label for="tbPOS_Reference_3">Reference 3</label>							
+							<input name="tbPOS_Reference_3" id="tbPOS_Reference_3" value=""> -->
+							
+<!-- Customer Reference -->
+				<!--	<label for="tbPOS_Customer_Ref">Customer Ref</label>							
+							<input name="tbPOS_Customer_Ref" id="tbPOS_Customer_Ref" value=""> -->							
+<!-- Customer Reference -->
+				<!--	<label for="tbPOS_Customer_Ref">Customer Ref</label>							
+							<input name="tbPOS_Customer_Ref" id="tbPOS_Customer_Ref" value=""> -->																
+<!-- Submit Button --> 
+						<input type="submit" name="btnPOS_Submit" value="Process" id="btnPOS_Submit" >
+					</form>
+			
+					
+</body>
